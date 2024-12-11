@@ -12,5 +12,11 @@ def add_task(item_to_do, description)
     (item_to_do, description, progress, date))
   conn.commit()
 
+def update_task_status(to_do_id, progress_update):
+  cursor.execute(
+    "UPDATE to_do_list SET progress = ? WHERE id = ?",
+    (progress_update, to_do_id)
+conn.commit()
+                 
   
     
